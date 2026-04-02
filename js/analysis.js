@@ -60,18 +60,30 @@ function clearImage() {
 const BACKEND_URL = 'https://soilsense-backend-api.onrender.com';
 
 async function runAnalysis() {
-  if (!currentFile && !document.getElementById('preview-img').src) return;
+  if (!currentFile) {
+    alert('Please upload an image first!');
+    return;
+  }
+
   document.getElementById('result-placeholder').style.display = 'none';
   document.getElementById('result-content').classList.remove('show');
   document.getElementById('loading-state').classList.add('show');
 
-  const imgSrc = document.getElementById('preview-img').src;
-
   try {
+    // ── Convert file to base64 properly ──
+    const base64 = await new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = reject;
+      reader.readAsDataURL(currentFile);
+    });
+
+    const imgSrc = document.getElementById('preview-img').src;
+
     const response = await fetch(`${BACKEND_URL}/predict`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ image: imgSrc })
+      body: JSON.stringify({ image: base64 })
     });
 
     const data = await response.json();
