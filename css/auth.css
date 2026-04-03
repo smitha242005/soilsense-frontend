@@ -1,6 +1,6 @@
-  #auth-page {
+#auth-page {
     background: linear-gradient(135deg, #3B2507 0%, #6B3F1A 40%, #A0522D 75%, #C8956C 100%);
-    display: flex; align-items: center; justify-content: center;
+    align-items: center; justify-content: center;
     padding: 2rem;
     position: relative; overflow: hidden;
   }
