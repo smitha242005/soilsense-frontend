@@ -1,6 +1,10 @@
 function showPage(name) {
-  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.page').forEach(p => {
+    p.classList.remove('active');
+    p.style.display = 'none';
+  });
   const page = document.getElementById(name + '-page');
+  page.style.display = 'block';
   page.classList.add('active');
   document.querySelectorAll('.nav-links button').forEach(b => b.classList.remove('active'));
   const navBtn = document.getElementById('nav-' + name);
