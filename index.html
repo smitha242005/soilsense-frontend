@@ -11,6 +11,11 @@
   <link rel="stylesheet" href="css/analysis.css">
   <link rel="stylesheet" href="css/guide.css">
   <link rel="stylesheet" href="css/media.css">
+  <style>
+    .page { display: none !important; }
+    .page.active { display: block !important; }
+    #auth-page.active { display: flex !important; }
+  </style>
 </head>
 <body>
 
@@ -30,7 +35,7 @@
 </nav>
 
 <!-- ══════════ AUTH PAGE ══════════ -->
-<div class="page" id="auth-page"></div>
+<div class="page" id="auth-page">
   <div class="auth-bg-text">SOIL</div>
   <div class="auth-container">
     <div class="auth-brand">
@@ -42,7 +47,6 @@
       <button class="auth-tab active" onclick="switchTab('login')">Sign In</button>
       <button class="auth-tab" onclick="switchTab('register')">Create Account</button>
     </div>
-    <!-- LOGIN FORM -->
     <div class="auth-form active" id="login-form">
       <div class="form-group">
         <label>Email Address</label>
@@ -55,7 +59,6 @@
       <button class="btn-primary" onclick="doLogin()">Sign In to SoilSense</button>
       <div class="auth-msg" id="login-msg"></div>
     </div>
-    <!-- REGISTER FORM -->
     <div class="auth-form" id="register-form">
       <div class="form-group">
         <label>Full Name</label>
@@ -170,9 +173,7 @@
     <h1>🔬 Soil Type Analysis</h1>
     <p>Upload a soil image to get AI-powered soil type identification and crop recommendations</p>
   </div>
-
   <div class="analysis-layout">
-    <!-- LEFT: Upload -->
     <div>
       <div class="upload-zone" id="upload-zone"
         onclick="document.getElementById('file-input').click()"
@@ -200,7 +201,6 @@
         </div>
         <input type="file" id="file-input" accept="image/*" onchange="handleFileSelect(event)">
       </div>
-
       <div style="margin-top:1.5rem;background:white;border-radius:var(--radius);padding:1.5rem;border:1.5px solid rgba(160,82,45,0.1)">
         <h4 style="font-size:0.9rem;color:var(--soil-dark);margin-bottom:0.8rem">📋 Tips for Better Results</h4>
         <ul style="list-style:none;font-size:0.83rem;color:var(--text-light);line-height:2">
@@ -212,8 +212,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- RIGHT: Results -->
     <div class="result-panel">
       <h3>Analysis Results</h3>
       <div class="placeholder-state" id="result-placeholder">
@@ -225,18 +223,12 @@
         <p style="color:var(--text-light);font-size:0.9rem">Analysing soil type...<br>This takes just a moment</p>
       </div>
       <div class="result-content" id="result-content">
-
-        <!-- Thumbnail -->
         <div style="margin-bottom:1.2rem">
           <img id="result-thumb"
             style="width:100%;height:160px;object-fit:cover;border-radius:var(--radius-sm)"
             src="" alt="">
         </div>
-
-        <!-- Soil Type Badge -->
         <div class="soil-type-badge" id="res-soil-type">🌱 Soil Type</div>
-
-        <!-- Confidence -->
         <div class="result-metric">
           <span class="metric-label">Model Confidence</span>
           <span class="metric-value" id="res-confidence">—</span>
@@ -244,8 +236,6 @@
         <div class="confidence-bar">
           <div class="confidence-fill" id="conf-fill" style="width:0%"></div>
         </div>
-
-        <!-- Moisture & Location -->
         <div class="result-metric" style="margin-top:8px">
           <span class="metric-label">💧 Ideal Moisture Level</span>
           <span class="metric-value" id="res-moisture">—</span>
@@ -255,8 +245,6 @@
           <span class="metric-value" id="res-found"
             style="font-size:0.82rem;text-align:right;max-width:60%">—</span>
         </div>
-
-        <!-- Soil Info Box -->
         <div class="soil-info-box">
           <h4>📝 About This Soil</h4>
           <p id="res-description">—</p>
@@ -265,8 +253,6 @@
           <h4>🌾 Recommended Crops</h4>
           <div class="crops-list" id="res-crops"></div>
         </div>
-
-        <!-- Moisture Range Bar -->
         <div class="moisture-range-section" id="moisture-range-section" style="display:none">
           <h4>💧 Ideal Moisture Range</h4>
           <div class="range-track">
@@ -279,13 +265,10 @@
             <span>100% Wet</span>
           </div>
         </div>
-
-        <!-- Top 3 Predictions -->
         <div class="top3-section">
           <h4>Top 3 Predictions</h4>
           <div id="res-top3"></div>
         </div>
-
         <button class="btn-upload btn-upload-fill"
           style="width:100%;margin-top:1.2rem;border-radius:12px"
           onclick="clearImage()">🔄 Analyse Another Image</button>
