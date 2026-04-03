@@ -173,3 +173,33 @@
     height: 100%; border-radius: 50px;
     background: var(--soil-warm);
   }
+  .moisture-range-section {
+  margin-top: 1.2rem;
+}
+.moisture-range-section h4 {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin-bottom: 0.8rem;
+  font-weight: 500;
+}
+.range-track {
+  position: relative;
+  height: 12px;
+  background: #F0EBE3;
+  border-radius: 50px;
+  margin: 0.5rem 0;
+}
+.range-fill {
+  position: absolute;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #81C784, #2E7D32);
+  transition: all 1s ease;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 4px;
+}

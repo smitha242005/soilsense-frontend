@@ -225,6 +225,7 @@
         <p style="color:var(--text-light);font-size:0.9rem">Analysing soil type...<br>This takes just a moment</p>
       </div>
       <div class="result-content" id="result-content">
+
         <!-- Thumbnail -->
         <div style="margin-bottom:1.2rem">
           <img id="result-thumb"
@@ -263,6 +264,20 @@
           <p id="res-characteristics" style="margin-bottom:0.8rem">—</p>
           <h4>🌾 Recommended Crops</h4>
           <div class="crops-list" id="res-crops"></div>
+        </div>
+
+        <!-- Moisture Range Bar -->
+        <div class="moisture-range-section" id="moisture-range-section" style="display:none">
+          <h4>💧 Ideal Moisture Range</h4>
+          <div class="range-track">
+            <div class="range-fill" id="moisture-range-fill" style="left:0%;width:0%"></div>
+          </div>
+          <div class="range-labels">
+            <span>0% Dry</span>
+            <span id="moisture-min">—</span>
+            <span id="moisture-max">—</span>
+            <span>100% Wet</span>
+          </div>
         </div>
 
         <!-- Top 3 Predictions -->

@@ -55,6 +55,8 @@ function clearImage() {
   document.getElementById('result-placeholder').style.display = 'block';
   document.getElementById('result-content').classList.remove('show');
   document.getElementById('loading-state').classList.remove('show');
+  document.getElementById('moisture-range-section').style.display = 'none';
+  document.getElementById('moisture-range-fill').style.width = '0%';
 }
 
 const BACKEND_URL = 'https://soilsense-backend-api.onrender.com';
@@ -70,7 +72,6 @@ async function runAnalysis() {
   document.getElementById('loading-state').classList.add('show');
 
   try {
-    // ── Convert file to base64 properly ──
     const base64 = await new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onload = () => resolve(reader.result);
@@ -152,6 +153,20 @@ function showResult(data, imgSrc) {
         <span class="top3-conf">${item.confidence}%</span>
       </div>`;
   });
+
+  // ── Moisture Range Bar ──
+  const soilId = data.soil_type.toLowerCase().replace('_soil', '').replace('_', '');
+  const soil = soils.find(x => x.id === soilId);
+  if (soil) {
+    document.getElementById('moisture-range-section').style.display = 'block';
+    setTimeout(() => {
+      const fill = document.getElementById('moisture-range-fill');
+      fill.style.left = soil.idealMin + '%';
+      fill.style.width = (soil.idealMax - soil.idealMin) + '%';
+    }, 100);
+    document.getElementById('moisture-min').textContent = soil.idealMin + '%';
+    document.getElementById('moisture-max').textContent = soil.idealMax + '%';
+  }
 
   document.getElementById('result-content').classList.add('show');
 }
