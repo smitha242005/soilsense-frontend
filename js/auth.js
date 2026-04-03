@@ -40,13 +40,3 @@ function logout() {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('auth-page').classList.add('active');
 }
-
-// Auto-login if session exists
-window.addEventListener('DOMContentLoaded', () => {
-  const session = getSession();
-  if (session) {
-    document.getElementById('nav-avatar').textContent = session.name.charAt(0).toUpperCase();
-    document.getElementById('main-nav').classList.add('visible');
-    showPage('home');
-  }
-});
