@@ -4,6 +4,6 @@ window.addEventListener('DOMContentLoaded', () => {
   if (session) {
     document.getElementById('nav-avatar').textContent = session.name.charAt(0).toUpperCase();
     document.getElementById('main-nav').classList.add('visible');
-    showPage('home');
+    setTimeout(() => showPage('home'), 50);
   }
 });
