@@ -1,5 +1,51 @@
 const translations = {
   en: {
+    // ── NAVBAR ──
+    navHome: 'Home',
+    navAnalysis: 'Analysis',
+    navGuide: 'Soil Guide',
+    navSignOut: 'Sign Out',
+
+    // ── HOME PAGE ──
+    heroBadge: '🛰️ AI-Powered Soil Analysis',
+    heroTitle: 'Identify Your Soil Type<br><em>Grow Smarter. Farm Better.</em>',
+    heroSubtitle: 'Upload a photo of your soil and get instant AI-powered soil type identification, crop recommendations, moisture guidance — in seconds.',
+    heroBtn1: 'Analyse Soil Now →',
+    heroBtn2: 'Explore Soil Types',
+    stat1Num: '94%+', stat1Lbl: 'Model Accuracy',
+    stat2Num: '10', stat2Lbl: 'Soil Types',
+    stat3Num: '6,773', stat3Lbl: 'Training Images',
+    stat4Num: '< 3s', stat4Lbl: 'Analysis Time',
+    featuresTitle: 'What SoilSense Does',
+    featuresSub: 'Everything you need to make smarter farming decisions',
+    feature1Title: 'Image Upload Analysis',
+    feature1Desc: 'Upload any soil photo — taken fresh or from your camera roll. Our AI analyses texture, colour, and pattern instantly.',
+    feature2Title: 'AI Soil Type Detection',
+    feature2Desc: 'Get the predicted soil type with confidence score from our ResNet50 model trained on 6,773 real soil images.',
+    feature3Title: 'Moisture & Crop Guidance',
+    feature3Desc: 'Receive ideal moisture levels and crop recommendations specifically tailored for your identified soil type.',
+    feature4Title: 'Soil Knowledge Guide',
+    feature4Desc: 'Browse 17 soil types with characteristics, ideal moisture ranges, care tips and agricultural guidance.',
+    howTitle: 'How It Works',
+    howSub: 'Four simple steps to smarter farming',
+    step1Title: 'Upload Image', step1Desc: 'Take a photo of your soil or pick one from your gallery',
+    step2Title: 'AI Processes', step2Desc: 'Our ResNet50 model analyses colour, texture and pattern',
+    step3Title: 'Get Results', step3Desc: 'See soil type, moisture guidance and crop recommendations',
+    step4Title: 'Take Action', step4Desc: 'Follow the recommendations for your specific soil type',
+    aboutTitle: 'About SoilSense',
+    aboutDesc: 'SoilSense is an AI-powered platform designed for farmers, agronomists, gardeners, and researchers who need fast, reliable soil type identification. Built using a combined dataset of 6,773 soil images across 10 soil types, our ResNet50 model achieves 94.83% accuracy — helping you make smarter farming decisions that improve crop yield and soil management.',
+    footerText: 'Made with 🌱 by <strong>SoilSense</strong> | AI-Powered Soil Type Intelligence',
+
+    // ── SOIL GUIDE PAGE ──
+    guideTitle: '📚 Soil Type Guide',
+    guideSub: 'Click any soil card to learn about its ideal moisture levels and crop recommendations',
+    backBtn: '← Back to Soil Guide',
+    idealMoistureRange: 'Ideal Moisture Range',
+    aboutThisSoil: 'About This Soil',
+    keyCharacteristics: 'Key Characteristics',
+    irrigationGuide: '💧 Irrigation Guide',
+
+    // ── ANALYSIS PAGE ──
     analysisTitle: '🔬 Soil Type Analysis',
     analysisSubtitle: 'Upload a soil image to get AI-powered soil type identification and crop recommendations',
     dropText: 'Drop your soil image here',
@@ -31,7 +77,54 @@ const translations = {
     dry: '0% Dry',
     wet: '100% Wet'
   },
+
   ta: {
+    // ── NAVBAR ──
+    navHome: 'முகப்பு',
+    navAnalysis: 'பகுப்பாய்வு',
+    navGuide: 'மண் வழிகாட்டி',
+    navSignOut: 'வெளியேறு',
+
+    // ── HOME PAGE ──
+    heroBadge: '🛰️ AI-மூலம் மண் பகுப்பாய்வு',
+    heroTitle: 'உங்கள் மண் வகையை அறியுங்கள்<br><em>சிறப்பாக வளர்க்க. சிறந்த விவசாயம்.</em>',
+    heroSubtitle: 'உங்கள் மண்ணின் புகைப்படத்தை பதிவேற்றி AI மூலம் உடனடியாக மண் வகை, பயிர் பரிந்துரை மற்றும் ஈரப்பத வழிகாட்டுதல் பெறுங்கள்.',
+    heroBtn1: 'மண்ணை பகுப்பாய் →',
+    heroBtn2: 'மண் வகைகளை ஆராய',
+    stat1Num: '94%+', stat1Lbl: 'மாதிரி துல்லியம்',
+    stat2Num: '10', stat2Lbl: 'மண் வகைகள்',
+    stat3Num: '6,773', stat3Lbl: 'பயிற்சி படங்கள்',
+    stat4Num: '< 3வி', stat4Lbl: 'பகுப்பாய்வு நேரம்',
+    featuresTitle: 'SoilSense என்ன செய்கிறது',
+    featuresSub: 'சிறந்த விவசாய முடிவுகளுக்கு தேவையான அனைத்தும்',
+    feature1Title: 'படம் பதிவேற்ற பகுப்பாய்வு',
+    feature1Desc: 'எந்த மண் புகைப்படத்தையும் பதிவேற்றுங்கள். நமது AI அமைப்பு, நிறம் மற்றும் வடிவத்தை உடனடியாக பகுப்பாய்கிறது.',
+    feature2Title: 'AI மண் வகை கண்டறிதல்',
+    feature2Desc: '6,773 மண் படங்களில் பயிற்சி பெற்ற ResNet50 மாதிரியிலிருந்து நம்பகத்தன்மை மதிப்பெண்ணுடன் மண் வகையை பெறுங்கள்.',
+    feature3Title: 'ஈரப்பதம் மற்றும் பயிர் வழிகாட்டுதல்',
+    feature3Desc: 'உங்கள் மண் வகைக்கு ஏற்ற சிறந்த ஈரப்பத அளவு மற்றும் பயிர் பரிந்துரைகளை பெறுங்கள்.',
+    feature4Title: 'மண் அறிவு வழிகாட்டி',
+    feature4Desc: '17 மண் வகைகளை பண்புகள், சிறந்த ஈரப்பத வரம்புகள் மற்றும் விவசாய வழிகாட்டுதலுடன் உலாவுங்கள்.',
+    howTitle: 'இது எவ்வாறு செயல்படுகிறது',
+    howSub: 'சிறந்த விவசாயத்திற்கு நான்கு எளிய படிகள்',
+    step1Title: 'படம் பதிவேற்று', step1Desc: 'உங்கள் மண்ணின் புகைப்படம் எடுக்கவும் அல்லது உங்கள் கேலரியிலிருந்து தேர்ந்தெடுக்கவும்',
+    step2Title: 'AI செயலாக்கம்', step2Desc: 'நமது ResNet50 மாதிரி நிறம், அமைப்பு மற்றும் வடிவத்தை பகுப்பாய்கிறது',
+    step3Title: 'முடிவுகளை பெறுங்கள்', step3Desc: 'மண் வகை, ஈரப்பத வழிகாட்டுதல் மற்றும் பயிர் பரிந்துரைகளை பாருங்கள்',
+    step4Title: 'நடவடிக்கை எடுங்கள்', step4Desc: 'உங்கள் குறிப்பிட்ட மண் வகைக்கான பரிந்துரைகளை பின்பற்றுங்கள்',
+    aboutTitle: 'SoilSense பற்றி',
+    aboutDesc: 'SoilSense என்பது விவசாயிகள், வேளாண் நிபுணர்கள் மற்றும் ஆராய்ச்சியாளர்களுக்காக வடிவமைக்கப்பட்ட AI-மூலம் இயங்கும் தளம். 10 மண் வகைகளில் 6,773 மண் படங்களைக் கொண்ட தரவுத்தொகுப்பைப் பயன்படுத்தி, நமது ResNet50 மாதிரி 94.83% துல்லியத்தை அடைகிறது.',
+    footerText: '🌱 உடன் தயாரிக்கப்பட்டது <strong>SoilSense</strong> | AI-மூலம் மண் வகை நுண்ணறிவு',
+
+    // ── SOIL GUIDE PAGE ──
+    guideTitle: '📚 மண் வகை வழிகாட்டி',
+    guideSub: 'சிறந்த ஈரப்பத அளவுகள் மற்றும் பயிர் பரிந்துரைகளை அறிய எந்த மண் அட்டையையும் கிளிக் செய்யவும்',
+    backBtn: '← மண் வழிகாட்டிக்கு திரும்பு',
+    idealMoistureRange: 'சிறந்த ஈரப்பத வரம்பு',
+    aboutThisSoil: 'இந்த மண்ணைப் பற்றி',
+    keyCharacteristics: 'முக்கிய பண்புகள்',
+    irrigationGuide: '💧 நீர்ப்பாசன வழிகாட்டி',
+
+    // ── ANALYSIS PAGE ──
     analysisTitle: '🔬 மண் வகை பகுப்பாய்வு',
     analysisSubtitle: 'AI மூலம் மண் வகை அடையாளம் மற்றும் பயிர் பரிந்துரைகளைப் பெற மண் படத்தை பதிவேற்றவும்',
     dropText: 'உங்கள் மண் படத்தை இங்கே போடுங்கள்',
@@ -62,6 +155,7 @@ const translations = {
     analyseAnother: '🔄 மற்றொரு படத்தை பகுப்பாய்',
     dry: '0% வறண்ட',
     wet: '100% ஈரமான',
+
     moistureLevels: {
       'Moderate (40-60%)': 'மிதமான (40-60%)',
       'Low-Moderate (30-50%)': 'குறைந்த-மிதமான (30-50%)',
@@ -71,6 +165,7 @@ const translations = {
       'Low-Moderate (25-45%)': 'குறைந்த-மிதமான (25-45%)',
       'Moderate (35-55%)': 'மிதமான (35-55%)'
     },
+
     soilInfo: {
       'Alluvial_Soil': {
         display_name: 'வண்டல் மண்',
@@ -158,19 +253,117 @@ function setLanguage(lang) {
 function applyTranslations() {
   const t = translations[currentLang];
 
-  // Page header
+  // ── NAVBAR ──
+  const navHome = document.getElementById('nav-home');
+  const navAnalysis = document.getElementById('nav-analysis');
+  const navGuide = document.getElementById('nav-guide');
+  const navSignOut = document.querySelector('.btn-logout');
+  if (navHome) navHome.textContent = t.navHome;
+  if (navAnalysis) navAnalysis.textContent = t.navAnalysis;
+  if (navGuide) navGuide.textContent = t.navGuide;
+  if (navSignOut) navSignOut.textContent = t.navSignOut;
+
+  // ── HOME PAGE ──
+  const heroBadge = document.querySelector('.hero-badge');
+  const heroTitle = document.querySelector('.hero h1');
+  const heroSubtitle = document.querySelector('.hero p');
+  const heroBtn1 = document.querySelector('.btn-hero-primary');
+  const heroBtn2 = document.querySelector('.btn-hero-secondary');
+  if (heroBadge) heroBadge.textContent = t.heroBadge;
+  if (heroTitle) heroTitle.innerHTML = t.heroTitle;
+  if (heroSubtitle) heroSubtitle.textContent = t.heroSubtitle;
+  if (heroBtn1) heroBtn1.textContent = t.heroBtn1;
+  if (heroBtn2) heroBtn2.textContent = t.heroBtn2;
+
+  // Stats
+  const statLabels = document.querySelectorAll('.stat-item .lbl');
+  const statNums = document.querySelectorAll('.stat-item .num');
+  if (statLabels.length >= 4) {
+    statLabels[0].textContent = t.stat1Lbl;
+    statLabels[1].textContent = t.stat2Lbl;
+    statLabels[2].textContent = t.stat3Lbl;
+    statLabels[3].textContent = t.stat4Lbl;
+  }
+  if (statNums.length >= 4) {
+    statNums[3].textContent = t.stat4Num;
+  }
+
+  // Features
+  const sectionTitles = document.querySelectorAll('.section-title');
+  const sectionSubs = document.querySelectorAll('.section-sub');
+  if (sectionTitles[0]) sectionTitles[0].textContent = t.featuresTitle;
+  if (sectionSubs[0]) sectionSubs[0].textContent = t.featuresSub;
+  if (sectionTitles[1]) sectionTitles[1].textContent = t.howTitle;
+  if (sectionSubs[1]) sectionSubs[1].textContent = t.howSub;
+
+  const featureCards = document.querySelectorAll('.feature-card');
+  if (featureCards.length >= 4) {
+    featureCards[0].querySelector('h3').textContent = t.feature1Title;
+    featureCards[0].querySelector('p').textContent = t.feature1Desc;
+    featureCards[1].querySelector('h3').textContent = t.feature2Title;
+    featureCards[1].querySelector('p').textContent = t.feature2Desc;
+    featureCards[2].querySelector('h3').textContent = t.feature3Title;
+    featureCards[2].querySelector('p').textContent = t.feature3Desc;
+    featureCards[3].querySelector('h3').textContent = t.feature4Title;
+    featureCards[3].querySelector('p').textContent = t.feature4Desc;
+  }
+
+  // How it works
+  const howSteps = document.querySelectorAll('.how-step');
+  if (howSteps.length >= 4) {
+    howSteps[0].querySelector('h4').textContent = t.step1Title;
+    howSteps[0].querySelector('p').textContent = t.step1Desc;
+    howSteps[1].querySelector('h4').textContent = t.step2Title;
+    howSteps[1].querySelector('p').textContent = t.step2Desc;
+    howSteps[2].querySelector('h4').textContent = t.step3Title;
+    howSteps[2].querySelector('p').textContent = t.step3Desc;
+    howSteps[3].querySelector('h4').textContent = t.step4Title;
+    howSteps[3].querySelector('p').textContent = t.step4Desc;
+  }
+
+  // About
+  const aboutSection = document.querySelector('.about-section');
+  if (aboutSection) {
+    aboutSection.querySelector('h2').textContent = t.aboutTitle;
+    aboutSection.querySelector('p').textContent = t.aboutDesc;
+  }
+
+  // Footer
+  const footer = document.querySelector('footer');
+  if (footer) footer.innerHTML = t.footerText;
+
+  // ── SOIL GUIDE PAGE ──
+  const guideH1 = document.querySelector('.guide-header h1');
+  const guidePara = document.querySelector('.guide-header p');
+  if (guideH1) guideH1.textContent = t.guideTitle;
+  if (guidePara) guidePara.textContent = t.guideSub;
+
+  const backBtn = document.querySelector('.btn-back');
+  if (backBtn) backBtn.textContent = t.backBtn;
+
+  const detailMoistureH3 = document.querySelector('.moisture-range-visual h3');
+  if (detailMoistureH3) detailMoistureH3.textContent = t.idealMoistureRange;
+
+  const detailDescTitle = document.getElementById('detail-desc-title');
+  if (detailDescTitle) detailDescTitle.textContent = t.aboutThisSoil;
+
+  const detailCharH3 = document.querySelector('.info-section h3:nth-child(3)');
+  if (detailCharH3) detailCharH3.textContent = t.keyCharacteristics;
+
+  const irrigH3 = document.querySelector('#detail-irrigation h3');
+  if (irrigH3) irrigH3.textContent = t.irrigationGuide;
+
+  // ── ANALYSIS PAGE ──
   const header = document.querySelector('#analysis-page .page-header h1');
   const subtitle = document.querySelector('#analysis-page .page-header p');
   if (header) header.textContent = t.analysisTitle;
   if (subtitle) subtitle.textContent = t.analysisSubtitle;
 
-  // Upload zone
   const dropH3 = document.querySelector('#upload-placeholder h3');
   const dropP = document.querySelector('#upload-placeholder > p');
   if (dropH3) dropH3.textContent = t.dropText;
   if (dropP) dropP.textContent = t.dropSub;
 
-  // Buttons
   const chooseBtn = document.querySelector('.btn-upload-fill');
   const sampleBtn = document.querySelector('.btn-upload-outline');
   const analyseBtn = document.querySelector('.btn-analyze');
@@ -180,7 +373,6 @@ function applyTranslations() {
   if (analyseBtn) analyseBtn.textContent = t.analyseBtn;
   if (clearBtn) clearBtn.textContent = t.clearBtn;
 
-  // Tips
   const tipsTitle = document.querySelector('#analysis-page h4');
   const tips = document.querySelectorAll('#analysis-page ul li');
   if (tipsTitle) tipsTitle.textContent = t.tipsTitle;
@@ -192,19 +384,15 @@ function applyTranslations() {
     tips[4].textContent = t.tip5;
   }
 
-  // Results panel
   const resultsTitle = document.querySelector('.result-panel h3');
   if (resultsTitle) resultsTitle.textContent = t.resultsTitle;
 
-  // Placeholder
   const placeholderP = document.querySelector('.placeholder-state p');
   if (placeholderP) placeholderP.innerHTML = t.placeholderText;
 
-  // Loading
   const loadingP = document.querySelector('.loading-state p');
   if (loadingP) loadingP.innerHTML = `${t.loadingText}<br>${t.loadingSub}`;
 
-  // Metrics
   const metricLabels = document.querySelectorAll('.metric-label');
   if (metricLabels.length >= 3) {
     metricLabels[0].textContent = t.confidence;
@@ -212,7 +400,6 @@ function applyTranslations() {
     metricLabels[2].textContent = t.foundIn;
   }
 
-  // Soil info box headings
   const infoHeadings = document.querySelectorAll('.soil-info-box h4');
   if (infoHeadings.length >= 3) {
     infoHeadings[0].textContent = t.aboutSoil;
@@ -220,7 +407,6 @@ function applyTranslations() {
     infoHeadings[2].textContent = t.recommendedCrops;
   }
 
-  // Moisture range
   const moistureH4 = document.querySelector('.moisture-range-section h4');
   if (moistureH4) moistureH4.textContent = t.moistureRange;
 
@@ -230,11 +416,9 @@ function applyTranslations() {
     rangeLabels[3].textContent = t.wet;
   }
 
-  // Top 3
   const top3H4 = document.querySelector('.top3-section h4');
   if (top3H4) top3H4.textContent = t.top3;
 
-  // Analyse another button
   const anotherBtn = document.querySelector('.result-content .btn-upload-fill');
   if (anotherBtn) anotherBtn.textContent = t.analyseAnother;
 }
