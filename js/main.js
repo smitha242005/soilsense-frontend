@@ -1,6 +1,4 @@
-// v3
 window.addEventListener('DOMContentLoaded', () => {
-  // Force remove auth active first
   document.getElementById('auth-page').classList.remove('active');
   renderSoilGrid();
   const session = getSession();
@@ -11,4 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     showPage('auth');
   }
+  // Apply saved language
+  applyTranslations();
+  updateLangButton();
 });
