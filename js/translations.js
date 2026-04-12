@@ -248,6 +248,7 @@ function setLanguage(lang) {
   localStorage.setItem('soilsense_lang', lang);
   applyTranslations();
   updateLangButton();
+  renderSoilGrid();
 }
 
 function applyTranslations() {
