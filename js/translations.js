@@ -334,8 +334,8 @@ function applyTranslations() {
   if (footer) footer.innerHTML = t.footerText;
 
   // ── SOIL GUIDE PAGE ──
-  const guideH1 = document.querySelector('.guide-header h1');
-  const guidePara = document.querySelector('.guide-header p');
+  const guideH1 = document.querySelector('#guide-page .guide-header h1');
+  const guidePara = document.querySelector('#guide-page .guide-header p');
   if (guideH1) guideH1.textContent = t.guideTitle;
   if (guidePara) guidePara.textContent = t.guideSub;
 
