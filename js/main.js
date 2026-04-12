@@ -9,7 +9,6 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     showPage('auth');
   }
-  // Apply saved language
   applyTranslations();
   updateLangButton();
 });
